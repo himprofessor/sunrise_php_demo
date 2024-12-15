@@ -9,9 +9,17 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        <?php if(isset($_SESSION["username"])){?>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Student list</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Class list</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/batch">Batch list</a>
+          </li>
+        <?php }?>
       </ul>
       <div class="d-flex gap-2">
         <?php if (isset($_SESSION["username"])){?>
@@ -21,7 +29,7 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Change password</a></li>
+              <li><a class="dropdown-item" href="/changePassword">Change password</a></li>
               <li><a class="dropdown-item" href="/logout">Log out</a></li>
 
             </ul>

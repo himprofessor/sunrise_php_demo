@@ -1,4 +1,4 @@
 <?php
 
-    require("views/pages/login.view.php");
+    require("views/pages/auth/login.view.php");
 ?>

@@ -1,3 +1,3 @@
 <?php
-    require("views/pages/register.view.php");
+    require("views/pages/auth/register.view.php");
 ?>

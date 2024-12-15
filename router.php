@@ -7,7 +7,12 @@
         "/register/process" => "controllers/auth/register.process.controller.php",
         "/logout" => "controllers/auth/logout.controller.php",
         "/login" => "controllers/auth/login.controller.php",
-        "/login/process" => "controllers/auth/login.process.controller.php"
+        "/login/process" => "controllers/auth/login.process.controller.php",
+        "/changePassword" => "controllers/auth/change.password.controller.php",
+        "/changePaswordd/process" => "controllers/auth/change.password.process.php",
+
+
+        "/batch" => "controllers/batch/batch.controller.php",
     ];
 
 

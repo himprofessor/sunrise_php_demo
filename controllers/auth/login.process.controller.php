@@ -8,6 +8,7 @@
             if(password_verify($pwd, $user["pwd"])){
                 unset($_SESSION["user-not-found"]);
                 $_SESSION["username"] = $user["username"];
+                $_SESSION["password"] = $user["pwd"];
                 header("Location: /");
             }else{
                 $_SESSION["wrong-pwd"] = "Password is incorrect, Please try again.";

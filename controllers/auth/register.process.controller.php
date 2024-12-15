@@ -6,6 +6,7 @@
         $email = $_POST["email"];
         $pwd = $_POST["pwd"];
         $confirmPwd = $_POST['comfirm-pwd'];
+        $pwdHash = password_hash($pwd,  PASSWORD_DEFAULT);
 
 
         if ($pwd !== $confirmPwd){
@@ -13,8 +14,9 @@
             header("Location: /register");
         }else{
             unset($_SESSION["wrong-pwd"]);
-            if(register($username, $email, $pwd)){
+            if(register($username, $email, $pwdHash)){
                 $_SESSION["username"] = $username;
+                $_SESSION["password"] = $pwdHash;
                 header("Location: /");
             }
         }
